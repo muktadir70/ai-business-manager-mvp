@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "AI Biz Importer",
+  "version": "0.1",
+  "description": "Collect product data from a page and send to your WordPress site.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "action": {}
+}
